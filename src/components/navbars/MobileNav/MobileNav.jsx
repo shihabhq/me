@@ -1,0 +1,42 @@
+import { useContext } from "react";
+import MobileNavBtn from "./MobileNavBtn";
+import { SidebarContext } from "../../../contexts/SidebarContext";
+
+const MobileNav = () => {
+  const { sidebarOpen, toggleSidebar } = useContext(SidebarContext);
+
+  return (
+    <div
+      style={{ right: sidebarOpen ? "0px" : "-100%" }}
+      className="font-sans sidebar w-4/5 h-screen bg-[rgba(0,0,0,.8)] z-30 space-y-6 text-xl mdl:hidden fixed flex flex-col items-center transition-all duration-300"
+    >
+      <div className="mt-32"></div>
+      <MobileNavBtn
+        toggleSidebar={toggleSidebar}
+        href={"about"}
+        text={"About"}
+      />
+      <MobileNavBtn
+        toggleSidebar={toggleSidebar}
+        href={"skills"}
+        text={"Skills"}
+      />
+      <MobileNavBtn toggleSidebar={toggleSidebar} href={"blog"} text={"Blog"} />
+      <MobileNavBtn
+        toggleSidebar={toggleSidebar}
+        href={"projects"}
+        text={"Projects"}
+      />
+      <button
+        onClick={toggleSidebar}
+        className="side-button cursor-pointer bg-gradient-to-r from-green-400 to-blue-500 hover:opacity-50 hover:text-background"
+      >
+        <a href="/shihab-cv.pdf" download>
+          Resume
+        </a>
+      </button>
+    </div>
+  );
+};
+
+export default MobileNav;
