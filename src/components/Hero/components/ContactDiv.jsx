@@ -17,7 +17,7 @@ const ContactDiv = ({ hideContactDiv }) => {
       <div
         action="https://formsubmit.co/438ce5424609b476640040eedfa690ea"
         method="POST"
-        className="bg-cardHover px-6 py-12 rounded-2xl w-[400px] h-[450px] space-y-4 relative transition-all duration-300"
+        className="bg-cardHover px-6 py-12 rounded-2xl w-[30%] min-w-[8    0%] mdl:min-w-[400px]  h-[450px] space-y-4 relative transition-all duration-300"
       >
         <span>
           <i
@@ -45,14 +45,13 @@ const ContactDiv = ({ hideContactDiv }) => {
         ></textarea>
         <div className="flex justify-center">
           <button
-            className="contact-button bg-button border-button hover:bg-inherit hover:text-white"
-            type="submit"
+            className="contact-button bg-button cursor-pointer
+             border-button hover:text-white"
             onClick={handleSubmit}
           >
             Send
           </button>
         </div>
-        <input type="hidden" name="_captcha" value="false" />
       </div>
     </div>
   );

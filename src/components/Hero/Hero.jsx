@@ -6,7 +6,6 @@ const Hero = () => {
   return (
     <>
       <HeroSection />
-      
     </>
   );
 };
