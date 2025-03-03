@@ -1,8 +1,8 @@
 import { motion } from "motion/react";
 
 const fadeUp = {
-  hidden: { opacity: 0, y: 75 },
-  visible: { opacity: 1, y: 0 },
+  hidden: { opacity: 0, y: 75, scale: 0.98 },
+  visible: { opacity: 1, y: 0, scale: 1 },
 };
 
 const AnimateComponent = ({ children, className, delay = 0 }) => {

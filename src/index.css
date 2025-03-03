@@ -137,7 +137,7 @@ html {
 }
 
 .portfolio-button {
-  @apply rounded-full px-8 py-3 transition-all duration-200 border-2 bg-button font-Opensans border-button font-bold text-card;
+  @apply rounded-lg px-8 py-3 transition-all duration-200 border-2 bg-button font-Opensans border-button font-bold text-card;
 }
 
 .portfolio-button:hover {

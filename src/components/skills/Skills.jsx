@@ -1,69 +1,91 @@
+import AnimateComponent from "../../shared/Animation";
+import SectionHeading from "../../shared/SectionHeading";
+import SkillsCard from "./components/SkillsCard";
+const skills = [
+  {
+    image:
+      "https://res.cloudinary.com/deyzzky20/image/upload/v1740986067/portfolio/rkaqclndmrjaeftdlp5a.svg",
+    name: "HTML",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/deyzzky20/image/upload/v1740986058/portfolio/hetlmcpjiecfvkcistsd.svg",
+    name: "CSS",
+  },
+
+  {
+    image:
+      "https://res.cloudinary.com/deyzzky20/image/upload/v1740930461/portfolio/ruvxlmoqoohotter530t.svg",
+    name: "TailWindCSS",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/deyzzky20/image/upload/v1740930103/portfolio/elvkxssthlbadqlgw4r6.svg",
+    name: "JavaScript",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/deyzzky20/image/upload/v1741010435/portfolio/kgqkvfgckbngqqmsnzdl.svg",
+    name: "TypeScript",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/deyzzky20/image/upload/v1741010859/portfolio/mgw9zi1cw84esjigjsd5.svg",
+    name: "Sass",
+  },
+
+  {
+    image:
+      "https://res.cloudinary.com/deyzzky20/image/upload/v1740929822/portfolio/tqefwmnan7wrq1nyzpbg.svg",
+    name: "React",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/deyzzky20/image/upload/v1740929821/portfolio/pnr3cycovxym6sx3nmuf.svg",
+    name: "NodeJS",
+  },
+
+  {
+    image:
+      "https://res.cloudinary.com/deyzzky20/image/upload/v1740934918/portfolio/svtv77hzyg6pyt9agpm9.svg",
+    name: "ExpressJS",
+  },
+
+  {
+    image:
+      "https://res.cloudinary.com/deyzzky20/image/upload/v1740929821/portfolio/yiurfwklddlitackfwqt.svg",
+    name: "Firebase",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/deyzzky20/image/upload/v1740929821/portfolio/i8qmy6ztj7mbhyvb3340.svg",
+    name: "MongoDB",
+  },
+  {
+    image:
+      "https://res.cloudinary.com/deyzzky20/image/upload/v1740934918/portfolio/lfcsfnfsoqwk2x19bhzx.svg",
+    name: "Mongoose",
+  },
+
+  {
+    image:
+      "https://res.cloudinary.com/deyzzky20/image/upload/v1741010993/portfolio/bi33cqqlgh7v7i6wllis.svg",
+    name: "Git",
+  },
+];
+
 const Skills = () => {
   return (
-    <section id="skills" className="py-40">
-      <h1 className="section-heading text-center mb-40 sm:text-5xl">
-        My Skills
-      </h1>
-      <div className="img-container grid-rows-8 xl:w-4/5 sm:grid-cols-2 sm:grid-rows-4 mdl:grid-cols-4 mdl:grid-rows-2">
-        <div className="flex flex-col">
-          <img src="./imgs/tech stacks/html-icon.svg" alt="" />
-          <p>HTML</p>
-        </div>
-        <div>
-          <img src="./imgs/tech stacks/css-icon.svg" alt="" />
-          <p>CSS</p>
-        </div>
-        <div>
-          <img src="./imgs/tech stacks/sass-icon.svg" alt="" />
-          <p>Sass</p>
-        </div>
-        <div>
-          <img src="./imgs/tech stacks/tailwind-css-icon.svg" alt="" />
-          <p>Tailwind CSS</p>
-        </div>
-        <div>
-          <img src="./imgs/tech stacks/typescript.svg" alt="" />
-          <p>Typescript</p>
-        </div>
-        <div>
-          <img
-            src="./imgs/tech stacks/javascript-programming-language-icon.svg"
-            alt=""
-          />
-          <p>JavaScript</p>
-        </div>
-        <div>
-          <img src="./imgs/tech stacks/reactjs.svg" alt="" />
-          <p>React</p>
-        </div>
-        <div>
-          <img src="./imgs/tech stacks/redux.svg" alt="" />
-          <p>Redux</p>
-        </div>
-        <div>
-          <img src="./imgs/tech stacks/nodejs.svg" alt="" />
-          <p>Node JS</p>
-        </div>
-        <div>
-          <img src="./imgs/tech stacks/Express.svg" alt="" />
-          <p>Express JS</p>
-        </div>
-        <div>
-          <img src="./imgs/tech stacks/mongodb.svg" alt="" />
-          <p>MongoDB</p>
-        </div>
-        <div>
-          <img src="./imgs/tech stacks/firebase.svg" alt="" />
-          <p>Firebase</p>
-        </div>
-        <div>
-          <img src="./imgs/tech stacks/excel.svg" alt="" />
-          <p>Microsoft Excel</p>
-        </div>
-        <div>
-          <img src="./imgs/tech stacks/git-icon.svg" alt="" />
-          <p>Git & Github</p>
-        </div>
+    <section id="skills" className="py-28">
+      <SectionHeading text={"My Skills"} />
+
+      <div
+        className=" mx-auto max-w-[90%] md:max-w-4xl flex flex-wrap gap-4 
+      items-center justify-center"
+      >
+        {skills.map((skill, index) => (
+          <SkillsCard key={index} skill={skill} />
+        ))}
       </div>
     </section>
   );
