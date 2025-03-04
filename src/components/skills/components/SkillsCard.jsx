@@ -13,6 +13,7 @@ const SkillsCard = ({ skill }) => {
       transition={{
         duration: 0.3,
       }}
+      viewport={{ once: true }}
       whileInView="visible"
       whileHover={{ translateY: -10 }}
     >

@@ -60,7 +60,7 @@ const ProjectCard = ({ project, idx, progress, targetScale, range }) => {
             <div className="flex-grow flex items-end gap-8">
               <a
                 className="portfolio-button  mdl:text-lg"
-                href={`projects/${project.case}`}
+                href={project.case}
                 target="_blank"
               >
                 Case Study

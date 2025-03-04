@@ -18,13 +18,15 @@ const FloatingNav = () => {
       style={{ transform: "translate(-50%)" }}
       className={`animated-nav hidden mdl:flex fixed inset-x-1/2 uppercase nav-down
       z-50 transition-all duration-300 bg-[rgba(0,0,0,.8)] px-16 rounded-full
-       items-center text-white w-fit text-lg h-[72px] ${didScrolled ? 'nav-down' : 'nav-up'}`}
+       items-center text-white w-fit text-lg h-[72px] ${
+         didScrolled ? "nav-down" : "nav-up"
+       }`}
     >
       <FloatingNavBtn href="#home" text="Home" />
       <FloatingNavBtn href="#about" text="About" />
       <FloatingNavBtn href="#projects" text="Projects" />
       <FloatingNavBtn href="#skills" text="Skills" />
-      <FloatingNavBtn href="#blog" text="Blog" />
+      <FloatingNavBtn href="#writings" text="writings" />
       <a
         href="/shihab-cv.pdf"
         download

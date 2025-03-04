@@ -165,7 +165,7 @@ html {
 }
 
 .social-link {
-  @apply text-2xl p-5 mx-[2px] text-button rounded-full bg-cardHover transition-all duration-300;
+  @apply text-2xl p-2 mx-[2px] text-button rounded-full bg-cardHover transition-all duration-300;
 }
 
 .contact-input {

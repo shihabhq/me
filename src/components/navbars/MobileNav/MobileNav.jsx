@@ -26,7 +26,11 @@ const MobileNav = () => {
         href={"skills"}
         text={"Skills"}
       />
-      <MobileNavBtn toggleSidebar={toggleSidebar} href={"blog"} text={"Blog"} />
+      <MobileNavBtn
+        toggleSidebar={toggleSidebar}
+        href={"writings"}
+        text={"writings"}
+      />
       <button
         onClick={toggleSidebar}
         className="side-button cursor-pointer bg-gradient-to-r from-green-400 to-blue-500 hover:opacity-50 hover:text-background"

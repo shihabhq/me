@@ -7,7 +7,7 @@ import { useRef } from "react";
 
 const projects = [
   {
-    case: "1",
+    case: "https://github.com/shihabhq/urban-estates/blob/main/README.md",
     title: "Urban Estates",
     link: "https://urbanestate-dbfe4.web.app/",
     image:
@@ -28,7 +28,7 @@ const projects = [
     ],
   },
   {
-    case: "2",
+    case: "https://github.com/shihabhq/urbaneats/blob/main/README.md",
     title: "UrbanEats",
     image:
       "https://res.cloudinary.com/deyzzky20/image/upload/v1740934039/portfolio/etbjdwnldh67lha4dv2p.jpg",
@@ -48,7 +48,7 @@ const projects = [
     ],
   },
   {
-    case: "3",
+    case: "https://github.com/shihabhq/workflowrr/blob/main/README.md",
     title: "WorkFlowr",
     image:
       "https://res.cloudinary.com/deyzzky20/image/upload/v1740980740/portfolio/mhurwsauum5vq3apuamj.png",
@@ -69,7 +69,7 @@ const projects = [
     ],
   },
   {
-    case: "4",
+    case: "https://github.com/shihabhq/colorzapp/blob/main/README.md",
     title: "ColorZapp",
     text: "ColorZapp is a web-based color-generating application built with HTML, CSS, and JavaScript. In this app, users can generate a random color by clicking 'Generate Color', the color will be displayed in the box below the button. Additionally, the User can copy that color's RGB and HEX code. The red, green, and blue toggles are for adjusting the color. This app also has a dark mode option.This was the final project of my CS50 task. Through this, I got my CS50 certificate.",
     image:
@@ -91,7 +91,7 @@ const Projects = () => {
   });
 
   return (
-    <section id="portfolio" className="py-28">
+    <section id="projects" className="py-28">
       <AnimateComponent>
         <h1 className="section-heading " style={{ marginBottom: 0 }}>
           Selected Projects

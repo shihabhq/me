@@ -39,7 +39,7 @@ const About = () => {
           <AnimateComponent>
             <p className=" text-base lg:text-lg font-normal lg:leading-8">
               I am a self-taught frontend developer specializing in React and
-              the MERN stack. I am passionate about creating interactive web
+              MERN stack technologies. I am passionate about creating interactive web
               applications and UIs with detail and thorough understanding.
             </p>
           </AnimateComponent>
