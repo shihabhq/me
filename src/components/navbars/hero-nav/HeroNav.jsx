@@ -18,7 +18,7 @@ const HeroNav = () => {
         <HeroNavBtn href={"about"} text={"About"} idx={1} />
         <HeroNavBtn href={"projects"} text={"Projects"} idx={2} />
         <HeroNavBtn href={"skills"} text={"Skills"} idx={3} />
-        <HeroNavBtn href={"writings"} text={"writingss"} idx={4} />
+        <HeroNavBtn href={"writings"} text={"writings"} idx={4} />
         <motion.a
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}

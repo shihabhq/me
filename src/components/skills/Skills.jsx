@@ -76,7 +76,7 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-28">
+    <section id="skills" className="pt-12 pb-28">
       <SectionHeading text={"My Skills"} />
 
       <div

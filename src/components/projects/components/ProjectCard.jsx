@@ -1,5 +1,6 @@
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { Link } from "react-router";
 
 const ProjectCard = ({ project, idx, progress, targetScale, range }) => {
   const container = useRef(null);
@@ -7,20 +8,20 @@ const ProjectCard = ({ project, idx, progress, targetScale, range }) => {
     target: container,
     offset: ["start end", "start start"],
   });
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1.1, 1]);
 
+  const imageScale = useTransform(scrollYProgress, [0, 1], [1.1, 1]);
   const scale = useTransform(progress, range, [1, targetScale]);
 
   return (
     <div
       ref={container}
-      className="w-[90%] mx-auto top-0 sticky max-w-[960px] min-h-[60vh] md:h-[80vh] flex items-center justify-center"
+      className="w-[90%] z-40 mx-auto top-0 sticky max-w-[960px] min-h-[60vh] md:h-[80vh] flex items-center justify-center pointer-events-none"
     >
       <motion.div
-        className="rounded-3xl p-[1px] bg-gradient-to-b from-blue-500 to-green-500 w-full"
+        className="rounded-3xl z-50 p-[1px] bg-gradient-to-b from-blue-500 to-green-500 w-full pointer-events-auto"
         style={{
           scale,
-          top: `calc(10% + ${idx * 25}px)`,
+          top: `calc(5% + ${idx * 25}px)`,
           position: "relative",
         }}
       >
@@ -41,8 +42,10 @@ const ProjectCard = ({ project, idx, progress, targetScale, range }) => {
 
           {/* Content Section */}
           <div className="w-full md:w-1/2 p-4 md:p-6 flex flex-col gap-4">
-            <h2 className="font-Poppins text-3xl md:text-4xl font-semibold text-button"
-            onClick={() => window.open(project.link, "_blank")}>
+            <h2
+              className="font-Poppins cursor-pointer text-3xl md:text-4xl font-semibold text-button"
+              onClick={() => window.open(project.link, "_blank")}
+            >
               {project.title}
             </h2>
             <p className="text-sm md:text-base text-justify">{project.text}</p>
@@ -50,7 +53,6 @@ const ProjectCard = ({ project, idx, progress, targetScale, range }) => {
               This project was built with:
             </p>
 
-            {/* Stacks (Tech Used) */}
             <div className="hidden grid-cols-4 md:grid md:grid-cols-8 gap-2 justify-items-center">
               {project.stacks.map((stack, index) => (
                 <img
@@ -64,14 +66,12 @@ const ProjectCard = ({ project, idx, progress, targetScale, range }) => {
 
             {/* Buttons */}
             <div className="flex-grow flex items-end gap-4">
-              <a
-                className="portfolio-button text-sm md:text-lg"
-                href={project.case}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to={`project/${project.case}`}
+                className="portfolio-button cursor-pointer text-sm md:text-lg"
               >
                 Case Study
-              </a>
+              </Link>
               <a
                 className="hidden sm:inline-block portfolio-button text-sm md:text-lg"
                 href={project.link}

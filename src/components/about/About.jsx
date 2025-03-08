@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 
 const About = () => {
   return (
-    <section className="py-28 min-h-[80vh]" id="about">
+    <section className="py-12 " id="about">
       <SectionHeading text={"About Myself"} />
       <div
         className="flex flex-col items-center 2xl:gap-0 gap-6 mdl:flex-row 

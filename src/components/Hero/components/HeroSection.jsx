@@ -93,7 +93,7 @@ const HeroSection = () => {
       <div className="w-[92%] xl:w-4/5 mx-auto container flex flex-col mdl:flex-row items-center h-full mdl:justify-between">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
+          animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
@@ -159,8 +159,8 @@ const HeroSection = () => {
 
         <motion.div
           initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
           <img
