@@ -1,4 +1,3 @@
-import { img } from "motion/react-client";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 
@@ -15,60 +14,69 @@ const ProjectCard = ({ project, idx, progress, targetScale, range }) => {
   return (
     <div
       ref={container}
-      className="w-[80%]
-       mx-auto top-0
-       sticky max-w-[960px] h-[80vh] flex items-center justify-center"
+      className="w-[90%] mx-auto top-0 sticky max-w-[960px] min-h-[60vh] md:h-[80vh] flex items-center justify-center"
     >
       <motion.div
-        className="rounded-3xl p-[1px] bg-gradient-to-b  from-blue-500 to-green-500"
+        className="rounded-3xl p-[1px] bg-gradient-to-b from-blue-500 to-green-500 w-full"
         style={{
           scale,
           top: `calc(10% + ${idx * 25}px)`,
           position: "relative",
         }}
       >
-        <div className="bg-card max-h-[80vh] rounded-[calc(1.5rem-1px)]  shadow-sm overflow-hidden flex flex-col mdl:flex-row">
+        <div className="bg-card rounded-[calc(1.5rem-1px)] shadow-sm overflow-hidden flex flex-col md:flex-row">
+          {/* Image Section */}
           <div
-            className="w-full mdl:w-1/2 overflow-hidden transition-all "
+            className="w-full md:w-1/2 bg-white overflow-hidden transition-all"
             onClick={() => window.open(project.link, "_blank")}
           >
             <motion.img
               style={{ scale: imageScale }}
               src={project.image}
-              alt="Album"
-              className="w-full max-h-[320px] mdl:max-h-[560px] mdl:min-h-[560px]
-          object-top h-full object-cover transition-all
-           hover:scale-105 cursor-pointer overflow-hidden hover:opacity-80"
+              alt="Project"
+              className="w-full h-auto max-h-[250px] md:max-h-[560px] object-cover
+              object-top transition-all hover:scale-105 cursor-pointer hover:opacity-80"
             />
           </div>
 
-          <div className="w-full mdl:w-1/2 py-6 px-8 flex flex-col gap-4 justify-start">
-            <h2 className="font-Poppins text-4xl font-semibold text-button mb-2 h-fit mdl:text-2xl xl:text-4xl">
+          {/* Content Section */}
+          <div className="w-full md:w-1/2 p-4 md:p-6 flex flex-col gap-4">
+            <h2 className="font-Poppins text-3xl md:text-4xl font-semibold text-button"
+            onClick={() => window.open(project.link, "_blank")}>
               {project.title}
             </h2>
-            <p className="text-base font-medium text-justify ">
-              {project.text}
+            <p className="text-sm md:text-base text-justify">{project.text}</p>
+            <p className="text-sm md:inline hidden md:text-base font-medium">
+              This project was built with:
             </p>
-            <p className="text-base mdl:text-base font-medium">
-              This project was built with,
-            </p>
-            <div className="grid grid-cols-8 gap-2 justify-items-center ">
-              {project.stacks.map((stack) => {
-                return <img src={stack} className="my-auto" key={stack} />;
-              })}
+
+            {/* Stacks (Tech Used) */}
+            <div className="hidden grid-cols-4 md:grid md:grid-cols-8 gap-2 justify-items-center">
+              {project.stacks.map((stack, index) => (
+                <img
+                  src={stack}
+                  className="w-8 h-8 md:w-10 md:h-10 object-contain"
+                  key={index}
+                  alt="stack-icon"
+                />
+              ))}
             </div>
-            <div className="flex-grow flex items-end gap-8">
+
+            {/* Buttons */}
+            <div className="flex-grow flex items-end gap-4">
               <a
-                className="portfolio-button  mdl:text-lg"
+                className="portfolio-button text-sm md:text-lg"
                 href={project.case}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 Case Study
               </a>
               <a
-                className="hidden sm:inline-block portfolio-button mdl:text-lg"
-                href={`${project.link}`}
+                className="hidden sm:inline-block portfolio-button text-sm md:text-lg"
+                href={project.link}
                 target="_blank"
+                rel="noopener noreferrer"
               >
                 View Live
               </a>
