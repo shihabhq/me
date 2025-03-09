@@ -32,7 +32,7 @@ const Gallery = ({ project }) => {
               <img
                 src={item.src}
                 alt={item.title}
-                className="w-full hover:scale-105 hover:brightness-75 transition-all object-cover rounded-t-xl"
+                className="w-full hover:scale-105 hover:brightness-75 transition-all object-cover rounded-t-lg"
               />
               <p
                 className="bg-white text-sm font-semibold text-background

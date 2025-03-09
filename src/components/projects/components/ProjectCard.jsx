@@ -56,10 +56,10 @@ const ProjectCard = ({ project, idx, progress, targetScale, range }) => {
             <div className="hidden grid-cols-4 md:grid md:grid-cols-8 gap-2 justify-items-center">
               {project.stacks.map((stack, index) => (
                 <img
-                  src={stack}
+                  src={stack.image}
                   className="w-8 h-8 md:w-10 md:h-10 object-contain"
                   key={index}
-                  alt="stack-icon"
+                  alt={stack.text}
                 />
               ))}
             </div>

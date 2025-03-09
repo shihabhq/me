@@ -1,4 +1,3 @@
-import React from "react";
 import SectionHeading from "../../shared/SectionHeading";
 import { motion } from "motion/react";
 
@@ -32,7 +31,7 @@ const Approach = ({ approaches }) => {
                 className="grid grid-cols-1 mdl:grid-cols-2 gap-2 mdl:gap-12"
                 key={index}
               >
-                <li key={index} className="flex items-start">
+                <li className="flex items-start">
                   <span
                     className="inline-flex items-center  justify-center p-2 rounded-full
                    bg-red-100 text-red-800 text-sm font-medium mr-3"

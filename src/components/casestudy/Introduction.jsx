@@ -28,7 +28,8 @@ const Introduction = ({ project }) => {
               return (
                 <div
                   key={index}
-                  className="h-28 flex items-center justify-center w-28 rounded-full"
+                  className="h-28 flex items-center font-semibold text-sm
+                  shadow-lg justify-center w-28 rounded-full"
                   style={{ backgroundColor: code }}
                 >
                   {code}
