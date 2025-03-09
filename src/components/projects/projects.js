@@ -465,7 +465,7 @@ const projects = [
       },
       {
         src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741548648/colorzapp/huebuz5x8megfbubwfnv.png",
-        title: "Dark mode of the UI with icon change",
+        title: "Dark mode of the UI",
       },
       {
         src: "https://res.cloudinary.com/deyzzky20/image/upload/v1741548647/colorzapp/vscqzwcpdtcyj1njojgm.png",
