@@ -70,7 +70,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.4, bounce: 0 }}
-          className="flex flex-col"
+          className="flex flex-col w-full mx-auto items-center justify-center"
         >
           <div className="flex items-center bg-card py-4 xsm:px-6 xsm:py-5 rounded-xl w-11/12 sm:min-w-[500px] mb-10 xl:min-w-[365px] xl:w-fit">
             <div className="p-4 rounded-full bg-cardHover mr-3">

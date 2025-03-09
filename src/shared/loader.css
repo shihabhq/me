@@ -1,6 +1,7 @@
 .loader {
     width: 112px;
     height: 112px;
+    transform: scale(2);
   }
   
   .box1,
