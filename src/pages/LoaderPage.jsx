@@ -4,7 +4,7 @@ import { useLocation } from "react-router";
 
 const LoaderPage = ({ children }) => {
   const [loader, setLoader] = useState(true);
-  const location = useLocation(); // Detect route changes
+  const location = useLocation(); 
 
   useEffect(() => {
     setLoader(true);
