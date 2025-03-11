@@ -9,7 +9,6 @@ function App() {
   return (
     <div className="bg-background text-white">
       <Toaster />
-      
       <Routes>
         <Route
           index

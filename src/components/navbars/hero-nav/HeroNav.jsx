@@ -23,7 +23,7 @@ const HeroNav = () => {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.1 }}
-          href="/public/Resume_of_Shihab.pdf"
+          href="/Resume_of_Shihab.pdf"
                download="Resume_of_Shihab.pdf"
           className="nav-button bg-gradient-to-r from-green-400 to-blue-500 hover:opacity-50 hover:text-background cursor-pointer"
         >

@@ -62,7 +62,7 @@ const About = () => {
             -right-full w-full h-full bg-button absolute"
               ></div>
               <a
-                href="/public/Resume_of_Shihab.pdf"
+                href="/Resume_of_Shihab.pdf"
                 download="Resume_of_Shihab.pdf"
                 className="relative mr-8 text-xl font-semibold transition-all"
               >
