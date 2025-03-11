@@ -8,7 +8,7 @@ const Introduction = ({ project }) => {
       <SectionHeading text={"Introduction"} />
       <div
         className="container mx-auto flex flex-col md:flex-row items-center 
-    gap-6 md:items-start justify-between max-w-[1280px] px-6"
+    gap-6 md:items-start justify-between max-w-[1280px] px-6 overflow-hidden"
       >
         <motion.div
           initial={{ x: -50 }}

@@ -28,7 +28,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="hero w-full mdl:h-[90vh] relative min-h-[560px]"
+      className="hero w-full mdl:h-[90vh] relative min-h-[560px] overflow-hidden"
       id="home"
       onMouseMove={handleMouseMove}
     >

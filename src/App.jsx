@@ -3,14 +3,13 @@ import { Route, Routes } from "react-router";
 import Homepage from "./pages/Homepage";
 import CaseStudy from "./pages/CaseStudy";
 import NotFound from "./pages/NotFound";
-import ScrollToTop from "./shared/ScrollToTop";
 import LoaderPage from "./pages/LoaderPage";
 
 function App() {
   return (
     <div className="bg-background text-white">
       <Toaster />
-      <ScrollToTop />
+      
       <Routes>
         <Route
           index
