@@ -62,7 +62,7 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-12">
+    <section id="contact" className="py-12 overflow-hidden">
       <SectionHeading text={"Contact me"} />
       <div className="flex max-w-[1280px] flex-col-reverse w-full md:w-3/5 xl:flex-row items-center justify-around xl:w-11/12 mx-auto">
         <motion.div

@@ -39,8 +39,9 @@ const About = () => {
           <AnimateComponent>
             <p className=" text-base lg:text-lg font-normal lg:leading-8">
               I am a self-taught frontend developer specializing in React and
-              MERN stack technologies. I am passionate about creating interactive web
-              applications and UIs with detail and thorough understanding.
+              MERN stack technologies. I am passionate about creating
+              interactive web applications and UIs with detail and thorough
+              understanding.
             </p>
           </AnimateComponent>
           <AnimateComponent>
@@ -61,8 +62,8 @@ const About = () => {
             -right-full w-full h-full bg-button absolute"
               ></div>
               <a
-                href="/shihab-cv.pdf"
-                download
+                href="/public/Resume_of_Shihab.pdf"
+                download="Resume_of_Shihab.pdf"
                 className="relative mr-8 text-xl font-semibold transition-all"
               >
                 Get My Resume

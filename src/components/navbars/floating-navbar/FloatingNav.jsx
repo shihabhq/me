@@ -28,8 +28,8 @@ const FloatingNav = () => {
       <FloatingNavBtn href="#skills" text="Skills" />
       <FloatingNavBtn href="#writings" text="writings" />
       <a
-        href="/shihab-cv.pdf"
-        download
+        href="/public/Resume_of_Shihab.pdf"
+        download="Resume_of_Shihab.pdf"
         className="anav-button hover:-translate-y-0 bg-gradient-to-r from-green-400 to-blue-500 capitalize hover:opacity-50 hover:text-background"
       >
         Resume

@@ -35,7 +35,7 @@ const MobileNav = () => {
         onClick={toggleSidebar}
         className="side-button cursor-pointer bg-gradient-to-r from-green-400 to-blue-500 hover:opacity-50 hover:text-background"
       >
-        <a href="/shihab-cv.pdf" download>
+        <a href="/public/Resume_of_Shihab.pdf" download="Resume_of_Shihab.pdf">
           Resume
         </a>
       </button>

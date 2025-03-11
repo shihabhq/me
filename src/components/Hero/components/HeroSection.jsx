@@ -28,7 +28,7 @@ const HeroSection = () => {
 
   return (
     <section
-      className="hero w-full h-[90vh] relative min-h-[560px]"
+      className="hero w-full mdl:h-[90vh] relative min-h-[560px]"
       id="home"
       onMouseMove={handleMouseMove}
     >
@@ -165,7 +165,7 @@ const HeroSection = () => {
         >
           <img
             src="https://res.cloudinary.com/deyzzky20/image/upload/v1738999074/portfolio/mi99sbu6mxfaloc6gakd.svg"
-            className="w-[600px] floating-image "
+            className=" w-[90%] md:w-[600px] floating-image "
             alt=""
           />
         </motion.div>

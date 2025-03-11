@@ -11,12 +11,16 @@ const WritingsCard = ({ image, title, description, link, idx }) => {
       <img
         src={image}
         alt={title}
-        className="w-full h-80 xl:h-52 object-cover cursor-pointer  hover:scale-105 transition-all object-top xl:object-left"
-        onClick={() => window.open(link, "_blank")}
+        className="w-full h-80 xl:h-52 object-cover cursor-pointer hover:scale-105 transition-all"
+        style={{ objectPosition: "center" }} // Center the image dynamically
       />
       <div className="p-4 flex flex-col flex-grow">
-        <h3 className="text-xl cursor-pointer  font-semibold text-cyan-400"
-           onClick={() => window.open(link, "_blank")}>{title}</h3>
+        <h3
+          className="text-xl cursor-pointer  font-semibold text-cyan-400"
+          onClick={() => window.open(link, "_blank")}
+        >
+          {title}
+        </h3>
         <p className="text-white opacity-60 transition-all hover:opacity-100 mt-2 flex-grow">
           {description.slice(0, 150)}...
         </p>
