@@ -15,7 +15,7 @@ const ProjectCard = ({ project, idx, progress, targetScale, range }) => {
   return (
     <div
       ref={container}
-      className="w-[90%] z-40 mx-auto top-0 sticky max-w-[960px] min-h-[60vh] md:h-[80vh] flex items-center justify-center pointer-events-none"
+      className="w-[90%] z-40 mx-auto top-0 sticky max-w-5xl min-h-screen sm:min-h-[60vh] md:h-[80vh] flex items-center justify-center pointer-events-none"
     >
       <motion.div
         className="rounded-3xl z-50 p-[1px] bg-gradient-to-b from-blue-500 to-green-500 w-full pointer-events-auto"
@@ -35,7 +35,7 @@ const ProjectCard = ({ project, idx, progress, targetScale, range }) => {
               style={{ scale: imageScale }}
               src={project.image}
               alt="Project"
-              className="w-full h-auto max-h-[250px] md:max-h-[560px] object-cover
+              className="w-full h-auto max-h-[250px] md:max-h-[520px] object-cover
               object-top transition-all hover:scale-105 cursor-pointer hover:opacity-80"
             />
           </div>
@@ -43,7 +43,7 @@ const ProjectCard = ({ project, idx, progress, targetScale, range }) => {
           {/* Content Section */}
           <div className="w-full md:w-1/2 p-4 md:p-6 flex flex-col gap-4">
             <h2
-              className="font-Poppins cursor-pointer text-3xl md:text-4xl font-semibold text-button"
+              className="font-Poppins cursor-pointer hover:underline text-3xl md:text-4xl font-semibold text-button"
               onClick={() => window.open(project.link, "_blank")}
             >
               {project.title}
@@ -68,12 +68,12 @@ const ProjectCard = ({ project, idx, progress, targetScale, range }) => {
             <div className="flex-grow flex items-end gap-4">
               <Link
                 to={`project/${project.case}`}
-                className="portfolio-button cursor-pointer text-sm md:text-lg"
+                className="portfolio-button text-center cursor-pointer text-sm md:text-lg"
               >
                 Case Study
               </Link>
               <a
-                className="hidden sm:inline-block portfolio-button text-sm md:text-lg"
+                className="hidden text-center sm:inline-block portfolio-button text-sm md:text-lg"
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"

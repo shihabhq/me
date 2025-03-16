@@ -6,28 +6,18 @@ const Approach = ({ approaches }) => {
     <section className="my-28 max-w-[1280px] mx-auto w-[90%]">
       <SectionHeading text={"My Approach"} />
       <div className="">
-        <motion.div
-          className="grid grid-cols-1 md:grid-cols-2 gap-12"
-          initial={{ y: -40, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.4 }}
-          viewport={{ once: true }}
-        >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <h2 className="text-3xl font-bold mb-4 text-center">
             Challenges I faced
           </h2>
           <h2 className="text-3xl font-bold  mb-4 mdl:block hidden text-center">
             My Solutions
           </h2>
-        </motion.div>
+        </div>
         <div>
           <ul className="space-y-6">
             {approaches.map((approach, index) => (
-              <motion.div
-                initial={{ y: -40, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.4 }}
-                viewport={{ once: true }}
+              <div
                 className="grid grid-cols-1 mdl:grid-cols-2 gap-2 mdl:gap-12"
                 key={index}
               >
@@ -49,7 +39,7 @@ const Approach = ({ approaches }) => {
                   </span>
                   <span className=" mdl:text-lg ">{approach.solution}</span>
                 </li>
-              </motion.div>
+              </div>
             ))}
           </ul>
         </div>

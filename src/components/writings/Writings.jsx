@@ -32,11 +32,11 @@ const blogs = [
 
 const Writings = () => {
   return (
-    <section id="writings" className="pt-12 pb-28">
+    <section id="writings" className="pt-16 md:pt-24 lg:pt-32">
       <SectionHeading text={"My Writings"} />
 
-      <div className="container max-w-6xl mx-auto px-6">
-        <div className="grid lg:grid-cols-3 gap-10">
+      <div className="max-w-7xl mx-auto px-6">
+        <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-10">
           {blogs.map((blog, index) => (
             <WritingsCard key={index} idx={index} {...blog} />
           ))}

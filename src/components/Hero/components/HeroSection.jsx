@@ -8,9 +8,6 @@ import { AiFillGithub } from "react-icons/ai";
 import { useState } from "react";
 import { TypeAnimation } from "react-type-animation";
 import ContactDiv from "./ContactDiv";
-import { motion } from "motion/react";
-
-import AnimateComponent from "../../../shared/Animation";
 
 const HeroSection = () => {
   const [openContactDiv, setOpenContactDiv] = useState(false);
@@ -28,15 +25,15 @@ const HeroSection = () => {
 
   return (
     <section
-      className="hero w-full mdl:h-[90vh] relative min-h-[560px] overflow-hidden"
+      className="hero w-full mdl:h-[85vh] relative min-h-[560px]"
       id="home"
       onMouseMove={handleMouseMove}
     >
-      <div className="hidden mdl:block">
+      <div className="hidden -z-40 mdl:block">
         <div className="w-28 h-28 absolute left-5">
           <img
             src={circle}
-            className="absolute circle w-12"
+            className="absolute circle z-10 w-12"
             alt=""
             style={{
               left: position.x,
@@ -90,15 +87,10 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <div className="w-[92%] xl:w-4/5 mx-auto container flex flex-col mdl:flex-row items-center h-full mdl:justify-between">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+      <div className=" w-[92%] xl:w-4/5 max-w-7xl mx-auto container flex flex-col mdl:flex-row items-center h-full mdl:justify-between">
+        <div>
           <div
-            className="font-sans w-full mdl:w-fit text-center my-16 mdl:my-0 text-4xl space-y-5
+            className="z-20 font-sans w-full mdl:w-fit text-center my-16 mdl:my-0 text-4xl space-y-5
         mdl:text-left animate__animated animate__fadeInLeft"
           >
             <p>Hi there!</p>
@@ -155,20 +147,15 @@ const HeroSection = () => {
               </a>
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div>
           <img
             src="https://res.cloudinary.com/deyzzky20/image/upload/v1738999074/portfolio/mi99sbu6mxfaloc6gakd.svg"
-            className=" w-[90%] md:w-[600px] floating-image "
+            className="z-40 w-[90%] md:w-[600px] floating-image "
             alt=""
           />
-        </motion.div>
+        </div>
       </div>
       {openContactDiv && <ContactDiv hideContactDiv={hideContactDiv} />}
     </section>

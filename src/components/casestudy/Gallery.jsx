@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import Lightbox from "yet-another-react-lightbox";
 import SectionHeading from "../../shared/SectionHeading";
 import "yet-another-react-lightbox/styles.css";
@@ -17,12 +17,11 @@ const Gallery = ({ project }) => {
         >
           {project.gallery.map((item, index) => (
             <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 + 0.1 * index }}
-              viewport={{ once: true }}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1}}
+
               key={index}
-              className=" rounded-lg cursor-pointer overflow-hidden shadow-lg bg-white
+              className=" rounded-lg cursor-pointer overflow-hidden shadow-lg bg-card
               hover:shadow-2xl transition-all duration-300"
               onClick={() => {
                 setCurrentIndex(index);
@@ -32,10 +31,10 @@ const Gallery = ({ project }) => {
               <img
                 src={item.src}
                 alt={item.title}
-                className="w-full hover:scale-105 hover:brightness-75 transition-all object-cover rounded-t-lg"
+                className="w-full hover:scale-105 h-[150px] hover:brightness-75 transition-all object-top object-cover rounded-t-lg"
               />
               <p
-                className="bg-white text-sm font-semibold text-background
+                className="bg-card text-white text-sm font-semibold
              px-1 rounded-b-lg py-2"
               >
                 {item.title}

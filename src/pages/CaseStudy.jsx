@@ -24,26 +24,14 @@ const CaseStudy = () => {
       <Introduction project={project} />
       <Approach approaches={project.approaches} />
       <Gallery project={project} />
-      <motion.section
-        className="container max-w-[1280px] w-[90%] mx-auto my-12"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3, delay: 0.2 }}
-        viewport={{ once: true }}
-      >
+      <section className="container max-w-[1280px] w-[90%] mx-auto my-12">
         <h1 className="text-4xl font-bold my-4">Key Learnings</h1>
         <p className="font-medium">{project.learnings}</p>
-      </motion.section>
-      <motion.section
-        className="container max-w-[1280px] w-[90%] mx-auto my-12"
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3, delay: 0.2 }}
-        viewport={{ once: true }}
-      >
+      </section>
+      <section className="container max-w-[1280px] w-[90%] mx-auto my-12">
         <h1 className="text-4xl font-bold my-4">Future Improvements</h1>
         <p className="font-medium">{project.improvements}</p>
-      </motion.section>
+      </section>
       <Footer />
     </>
   );

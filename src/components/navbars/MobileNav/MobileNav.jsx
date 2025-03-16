@@ -8,7 +8,8 @@ const MobileNav = () => {
   return (
     <div
       style={{ right: sidebarOpen ? "0px" : "-100%" }}
-      className="font-sans sidebar w-4/5 h-screen bg-[rgba(0,0,0,.8)] z-30 space-y-6 text-xl mdl:hidden fixed flex flex-col items-center transition-all duration-300"
+      className="font-sans sidebar w-4/5 h-screen bg-[rgba(0,0,0,.8)] z-30 space-y-6 text-xl 
+      mdl:hidden fixed flex flex-col items-center transition-all duration-300"
     >
       <div className="mt-32"></div>
       <MobileNavBtn

@@ -22,7 +22,7 @@ const FloatingNav = () => {
          didScrolled ? "nav-down" : "nav-up"
        }`}
     >
-      <FloatingNavBtn href="#home" text="Home" />
+      <FloatingNavBtn href="#" text="Home" />
       <FloatingNavBtn href="#about" text="About" />
       <FloatingNavBtn href="#projects" text="Projects" />
       <FloatingNavBtn href="#skills" text="Skills" />

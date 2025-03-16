@@ -15,10 +15,10 @@ const Projects = () => {
   });
 
   return (
-    <section id="projects" className="pt-12 py-28">
-      <AnimateComponent>
-        <h1 className="section-heading pt-16">Selected Projects</h1>
-      </AnimateComponent>
+    <section id="projects" className="pt-16 md:pt-24 lg:pt-32">
+      <div>
+        <h1 className="section-heading ">Selected Projects</h1>
+      </div>
 
       {projects.map((project, index) => {
         const targetScale = 1 - (projects.length - index) * 0.05;

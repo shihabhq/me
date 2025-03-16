@@ -62,16 +62,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="py-12 overflow-hidden">
+    <section id="contact" className="py-16 md:py-24 lg:py-32">
       <SectionHeading text={"Contact me"} />
       <div className="flex max-w-[1280px] flex-col-reverse w-full md:w-3/5 xl:flex-row items-center justify-around xl:w-11/12 mx-auto">
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, bounce: 0 }}
-          className="flex flex-col w-full mx-auto items-center justify-center"
-        >
+        <div className="flex flex-col w-full mx-auto items-center justify-center">
           <div className="flex items-center bg-card py-4 xsm:px-6 xsm:py-5 rounded-xl w-11/12 sm:min-w-[500px] mb-10 xl:min-w-[365px] xl:w-fit">
             <div className="p-4 rounded-full bg-cardHover mr-3">
               <span>
@@ -107,17 +101,13 @@ const Contact = () => {
               </span>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         <div>
           <h1 className="text-2xl font-bold block my-10 xl:hidden">OR</h1>
         </div>
 
-        <motion.form
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.4, bounce: 0 }}
+        <form
           ref={form}
           onSubmit={sendEmail}
           className="bg-card p-8 md:p-12 rounded-2xl space-y-8 w-11/12 md:w-fit md:min-w-[715px]"
@@ -158,7 +148,7 @@ const Contact = () => {
           >
             Send <GrSend size={24} />
           </button>
-        </motion.form>
+        </form>
       </div>
     </section>
   );

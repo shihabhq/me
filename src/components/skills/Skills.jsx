@@ -41,6 +41,11 @@ const skills = [
   },
   {
     image:
+      "https://res.cloudinary.com/deyzzky20/image/upload/v1742088762/portfolio/prztnf6idejyykxvfx2y.svg",
+    name: "Redux",
+  },
+  {
+    image:
       "https://res.cloudinary.com/deyzzky20/image/upload/v1740929821/portfolio/pnr3cycovxym6sx3nmuf.svg",
     name: "NodeJS",
   },
@@ -76,11 +81,11 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="pt-12 pb-28">
+    <section id="skills" className="pt-16 md:pt-24 lg:pt-32">
       <SectionHeading text={"My Skills"} />
 
       <div
-        className=" mx-auto max-w-[90%] md:max-w-4xl flex flex-wrap gap-4 
+        className="mx-auto max-w-[90%] md:max-w-6xl flex flex-wrap gap-4 
       items-center justify-center"
       >
         {skills.map((skill, index) => (

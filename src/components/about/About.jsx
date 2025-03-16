@@ -5,12 +5,12 @@ import { motion } from "motion/react";
 
 const About = () => {
   return (
-    <section className="py-12 " id="about">
+    <section className="pt-16 md:pt-24 lg:pt-32 max-w-7xl mx-auto" id="about">
       <SectionHeading text={"About Myself"} />
       <div
         className="flex flex-col items-center 2xl:gap-0 gap-6 mdl:flex-row 
          justify-center
-      w-[95%] xl:w-4/5 mx-auto container"
+      w-[95%] mx-auto"
       >
         <div className=" w-2/4 animate__animated animate__fadeInUp">
           <motion.img
@@ -27,33 +27,32 @@ const About = () => {
           className="space-y-4 font-Opensans text-center max-w-xl mdl:text-left
         w-full"
         >
-          <AnimateComponent>
+          <div>
             <h2 className="text-2xl lg:text-3xl font-semibold font-Opensans lg:leading-10">
               I am a{" "}
               <span className="text-button">
-                Frontend Developer <span className="text-white">&</span> <br />I
-                bring Ideas to Life with Code
+                Frontend Developer <span className="text-white">&</span> I bring
+                Ideas to Life with Code
               </span>
             </h2>
-          </AnimateComponent>
-          <AnimateComponent>
+          </div>
+          <div>
             <p className=" text-base lg:text-lg font-normal lg:leading-8">
-              I am a self-taught frontend developer specializing in React and
-              MERN stack technologies. I am passionate about creating
-              interactive web applications and UIs with detail and thorough
-              understanding.
+              I am a self-taught web developer specializing in React and MERN
+              stack technologies. I am passionate about creating interactive web
+              applications and UIs with detail and thorough understanding.
             </p>
-          </AnimateComponent>
-          <AnimateComponent>
+          </div>
+          <div>
             <p className="text-base lg:text-lg font-normal lg:leading-8">
               I enjoy turning creative ideas into functional and beautiful web
               applications. I am constantly learning new things and trying to
               make a good impact in the world with my code.
             </p>
-          </AnimateComponent>
+          </div>
           <AnimateComponent>
             <button
-              className="w-56 cursor-pointer rounded-full cv-button 
+              className="w-56 cursor-pointer cv-button 
           overflow-hidden relative font-Opensans h-16 focus:ring-2 
           ring-button border border-button text-lg"
             >
